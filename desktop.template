@@ -2,6 +2,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
+StartupNotify=true
+Categories=Utility;
 Terminal=false
 Icon[en_US]=i-network-printer
 Name[en_US]={NAME}
