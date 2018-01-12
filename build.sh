@@ -21,7 +21,6 @@ DESKTOP_SHORTCUT_PATH="$HOME_PATH/desktop.template"
 CONTROL_PATH="$HOME_PATH/control.template"
 
 
-echo $HOME_PATH
 if ! exists npm
 then
    sudo apt-get update && sudo apt-get install -y npm
@@ -46,13 +45,13 @@ nativefier $DEFAULT_FLAGS $flags $TARGET_URL 2>&1 > /dev/null
 mv "$PKG_NAME-linux-x64" "$TARGET_APP_PATH/$PKG_NAME"
 chmod -R +rx "$TARGET_APP_PATH/$PKG_NAME/resources/app"
 
-echo "Linking the executable file for $APP_NAME"
+echo "Linking the executable file for $APP_NAME..."
 [ -d $TARGET_BIN_PATH ] || mkdir -p $TARGET_BIN_PATH
 rm -rf $TARGET_BIN_PATH/$PKG_NAME
 cd "$TARGET_BIN_PATH" && ln -sr "../share/$PKG_NAME/$PKG_NAME" "$PKG_NAME"
 cd "$HOME_PATH"
 
-echo "Creating desktop shortcut for $APP_NAME"
+echo "Creating desktop shortcut for $APP_NAME..."
 [ -d $TARGET_DESKTOP_SHORTCUT_PATH ] || mkdir -p $TARGET_DESKTOP_SHORTCUT_PATH
 sed "s/{NAME}/$APP_NAME/g" $DESKTOP_SHORTCUT_PATH | sed "s/{CMD}/$PKG_NAME/g" > "$TARGET_DESKTOP_SHORTCUT_PATH/$PKG_NAME.desktop"
 
