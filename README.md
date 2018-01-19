@@ -5,3 +5,9 @@ Debian Nativefier is an automation script that can make a desktop app for any we
 # System Requirements
   - OS: debian based linux (ex: debian, ubuntu, etc)
   - ARCH: amd64
+
+# How to use?
+
+```sh
+git clone git@github.com:lherman-cs/debian-nativefier.git && cd debian-nativefier && ./build.sh 
+```
