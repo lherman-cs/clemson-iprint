@@ -1,12 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Version=1.0
+Version={VERSION}
 Type=Application
 StartupNotify=true
 Categories=Utility;
 Terminal=false
-Icon[en_US]=i-network-printer
 Name[en_US]={NAME}
 Exec={CMD}
 Name={NAME}
-Icon=i-network-printer

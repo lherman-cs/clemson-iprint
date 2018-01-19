@@ -1,5 +1,5 @@
 Package: {NAME} 
-Version: 0.1
+Version: {VERSION}
 Maintainer: {MAINTAINER} 
 Architecture: amd64 
 Description: {DESCRIPTION}
